@@ -36,15 +36,15 @@ jobs:
         uses: Jaid/action-npm-install@v1.2.4
 
 
-      - name: installing build globally
-        run : npm install -g build
+      # - name: installing build globally
+      #   run : npm install -g build
         
         
       - name: installing build
         run: yarn build
            
-      - name: installing surge
-        run : npm install --global surge
+      # - name: installing surge
+      #   run : npm install --global surge
          
       - name: deploying on surge
         run : surge ./build http://nervous-cow.surge.sh/  --token ${{secrets.PROJECTTOKEN}}
