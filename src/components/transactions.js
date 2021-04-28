@@ -1,7 +1,7 @@
 
 
 import { useContext } from "react";
-import GlobalContext from "../context/globalstate"
+import {GlobalContext} from "../context/globalstate"
 
 function Transaction({transaction}) {
 
