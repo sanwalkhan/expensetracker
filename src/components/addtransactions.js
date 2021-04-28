@@ -1,7 +1,7 @@
 import React , { useState , useContext} from "react";
 
 
-import GlobalContext from "../context/globalstate"
+import {GlobalContext} from "../context/globalstate"
 
 
 function AddTransaction() {
@@ -10,7 +10,7 @@ function AddTransaction() {
 
   const [transactionamount, setTransactionAmount] = useState(0)
 
-  const {addtransaction} = useContext(GlobalContext)
+  const { addtransactions } = useContext(GlobalContext)
 
   const onsubmit = e => {
     e.preventDefault();
@@ -20,7 +20,7 @@ function AddTransaction() {
       description,
       transactionamount: +transactionamount
     }
-    addtransaction(newTransaction)
+    addtransactions(newTransaction)
   }
 
   return (
