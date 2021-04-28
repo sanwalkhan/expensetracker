@@ -1,10 +1,10 @@
 
 import { useContext } from "react";
-import GlobalContext from "../context/globalstate"
+import {GlobalContext} from "../context/globalstate"
 
 function AccountSummary() {
 
-  const {transactions} = useContext(GlobalContext)
+  const { transactions } = useContext(GlobalContext)
 
   const transactionamount = transactions.map(transaction => transaction.amount);
 
