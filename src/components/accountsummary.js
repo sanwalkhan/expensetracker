@@ -6,11 +6,10 @@ function AccountSummary() {
 
   const { transactions } = useContext(GlobalContext)
 
-  const transactionamount = transactions.map(transaction => transaction.amount);
+  const transactionamount = transactions.map(transaction => transaction.transactionamount);
 
 
-  const income = transactionamount
-  .filter(transaction => transaction > 0)
+  const income = transactionamount  .filter(transaction => transaction > 0)
   .reduce((acc , transaction ) => (acc += transaction) , 0)
   .toFixed(2)
   
