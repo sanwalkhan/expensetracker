@@ -45,11 +45,20 @@ function GlobalProvider({children}){
         });
     }
 
+
+    function addtransactions(transaction){
+        dispatch({
+            type:"ADD_TRANSACTION",
+            payload:transaction
+        })
+    }
+
     return(
         <GlobalContext.Provider value={
             {
                 transactions:state.transactions,
-                deletetransaction
+                deletetransaction,
+                addtransactions
             }
         }>
             {children}
