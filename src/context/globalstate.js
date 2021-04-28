@@ -36,7 +36,7 @@ export const GlobalContext = createContext(initialState)
 
 function GlobalProvider({children}){
 
-    const [state] = useReducer(AppReducer , initialState)
+    const [state , dispatch] = useReducer(AppReducer , initialState)
 
     return(
         <GlobalContext.Provider value={

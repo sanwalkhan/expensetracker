@@ -3,10 +3,14 @@
 
 
 function Transaction({transaction}) {
+
+  const Sign = transaction.amount < 0 ? "-" : "+";
+
+
   return (
-    <li className="plus">
+    <li className="minus">
       {transaction.description}
-      <span>{transaction.transactionamount}</span>
+      <span>{Sign}${transaction.amount}</span>
       <button className="delete-btn">X</button>
     </li>
   );

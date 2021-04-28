@@ -1,11 +1,13 @@
 import React , { useState } from "react";
 
 
-
-
 function AddTransaction() {
-    const [description, setDescription] = useState();
-    const [transactionamount, setTransactionAmount] = useState()
+
+  const [description, setDescription] = useState("")
+
+  const [transactionamount, setTransactionAmount] = useState(0)
+
+
   return (
     <div>
       <h3>Add New Transaction</h3>
@@ -17,7 +19,7 @@ function AddTransaction() {
             id="description"
             placeholder="Details of Transactions"
             value={description}
-            onChange={(e)=>setDescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </div>
         <div className="form-control">
@@ -26,9 +28,8 @@ function AddTransaction() {
             type="number"
             id="transactionamount"
             placeholder="Enter Transaction Amount"
-            value={transactionamount}
-            onChange = {(e) => setTransactionAmount(e.target.value)}
-
+            value = {transactionamount} 
+            onChange={(e)=>setTransactionAmount(e.target.value)}
           />
         </div>
         <button className="btn">
