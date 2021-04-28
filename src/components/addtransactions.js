@@ -16,7 +16,7 @@ function AddTransaction() {
     e.preventDefault();
 
     const newTransaction = {
-      id: Math.floor(Math.random()* 100000000),
+      id: new Date().getTime,
       description,
       transactionamount: +transactionamount
     }
@@ -35,6 +35,7 @@ function AddTransaction() {
             placeholder="Details of Transactions"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            required="required"
           />
         </div>
         <div className="form-control">
@@ -45,6 +46,7 @@ function AddTransaction() {
             placeholder="Enter Transaction Amount"
             value = {transactionamount} 
             onChange={(e)=>setTransactionAmount(e.target.value)}
+            required="required"
           />
         </div>
         <button className="btn">
