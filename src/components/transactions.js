@@ -10,7 +10,7 @@ function Transaction({transaction}) {
   return (
     <li className="minus">
       {transaction.description}
-      <span>{Sign}${transaction.amount}</span>
+      <span>{Sign}${Math.abs(transaction.amount)}</span>
       <button className="delete-btn">X</button>
     </li>
   );
