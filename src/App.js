@@ -20,11 +20,12 @@ function App() {
         <AccountSummary />
         {/* Transaction History */}
 
-        <TransactionHistory />
+        
 
         {/* Add Transactions */}
 
         <AddTransaction />
+        <TransactionHistory />
       </div>
 
       
